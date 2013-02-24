@@ -1,0 +1,12 @@
+body {
+	font: 1em/16px "proxima-nova", "Helvetica-Neue", "Helvetica", sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #444;
+}
+
+.main-title {
+	text-align: center;
+	font-style: italic;
+	margin-top: 25%;
+}
