@@ -5,10 +5,6 @@ body {
 	color: #444;
 }
 
-[class=*site-] {
-	text-align: center;
-}
-
 .site-header {
 	text-align: center;
 	font-style: italic;
