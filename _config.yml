@@ -1,9 +1,0 @@
-auto: true
-title: Tom Oakley
-safe: false
-description: "Designer & Developer"
-permalink: /:categories/:title
-# defaults
-sass:
-    syntax: scss        # scss|sass
-    style:  compressed # nested|expanded|compact|compressed
