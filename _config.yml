@@ -1,8 +1,6 @@
 auto: true
 title: Tom Oakley
-category_dir: ''
-category_title_prefix: ''
-category_meta_description_prefix: ''
+safe: false
 description: "Designer & Developer"
 permalink: /:categories/:title
 # defaults
