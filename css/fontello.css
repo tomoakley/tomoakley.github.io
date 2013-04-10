@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?6027407");
+  src: url("../font/fontello.eot?6027407#iefix") format('embedded-opentype'), url("../font/fontello.woff?6027407") format('woff'), url("../font/fontello.ttf?6027407") format('truetype'), url("../font/fontello.svg?6027407#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?6027407#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  color: #444;
+  transition: 0.2s color ease;
+/* opacity .8 */
+/* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-forrst:before { content: '\3a'; } /* ':' */
+.icon-forrst:hover:before {
+	color: #5b9a68;
+}
+.icon-github:before { content: '\f300'; } /* '' */
+.icon-github:hover:before {
+	color: #4183c4;
+}
+.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-twitter:hover:before {
+	color: #00a0d1;
+}
+.icon-facebook-squared:before { content: '\f30e'; } /* '' */
+.icon-linkedin:before { content: '\f318'; } /* '' */
+.icon-linkedin:hover:before {
+	color: #007bb6;
+}
+.icon-dribbble:before { content: '\f31b'; } /* '' */
+.icon-dribbble:hover:before {
+	color: #ea4c89;
+}
+.icon-skype:before { content: '\f339'; } /* '' */
+.icon-skype:hover:before {
+	color: #00aff0;
+}

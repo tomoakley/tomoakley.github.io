@@ -1,25 +1,39 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Home
+description: home sweet home
+navigation: false
+---
 
-<head>
-	<title>Tom Oakley // Web Designer & developer</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes width=device-width">
-	<link rel="stylesheet" href="style.css">
-    <!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<script type="text/javascript" src="//use.typekit.net/yap5ofn.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
+<h2 class="hero-header">Designer, developer & nice guy from the UK</h2>
 
-<body>
+<div class="recent-work">
+	<ul>
+		{% for post in site.categories.projects %}
+			<li>
+				<a href="{{ post.url }}">
+					<img src="{{ post.image }}" />
+					<h3>{{ post.title }}</h3>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<a href="/projects" class="more-projects">More <span class="bold">&#8611;</span></a>
+</div>
 
-	<header class="site-header">
-		<span>Tom Oakley // Web Designer & Developer</span>
-		<h1 class="main-title">Coming Soon</h1>
-		<span>You can <a href="mailto:tom@5lin.es">email</a>, <a href="http://twitter.com/tomoakley125">Tweet</a> or <a href="#">Skype</a> me.</span>
-	</header>
-	
-</body>
-</html>
+<div class="about-intro">
+	<h3 class="sub-section-title"><a href="/about">About</a></h3>
+	<p>I'm an 18 year old student living in South East of the good ol' United Kingdom. I design and develop websites for <a href="http://5lin.es">5 Lines Creative</a>, a design studio which I co-founded. I am in the final year of education - I attend a Sixth Form College in Hampshire, studying Maths, History, Chemistry and Biology. I am planning on going to University in September 2013 to study Software Engineering.</p>
+</div>
+
+<div class="latest-posts">
+	<h3 class="sub-section-title"><a href="/blog">Writing</a></h3>
+	<ul>
+		{% for post in site.categories.blog limit:3 %}
+			<li class="blog-post">
+				<h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+				<!-- <span class="post-meta">{{ post.date | date: "%d %B %Y" }}</span> --> 
+			</li>
+		{% endfor %}
+	</ul>
+</div>

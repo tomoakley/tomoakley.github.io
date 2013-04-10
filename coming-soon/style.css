@@ -1,0 +1,26 @@
+body {
+	font: 1em/16px "chaparral-pro", "Georgia", serif;
+	margin: 0;
+	padding: 0;
+	color: #444;
+}
+
+.site-header {
+	text-align: center;
+	font-style: italic;
+	margin-top: 15%;
+}
+
+a, 
+a:visited {
+	color: #444;	
+	text-decoration: none;
+	border-bottom: solid thin #444;
+	padding: 0 2px;
+	-webkit-transition: all 0.2s ease;
+}
+
+a:hover {
+	background: #444;
+	color: #fff;
+}

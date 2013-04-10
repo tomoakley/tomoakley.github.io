@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>{% if page.title }%} {{page.title}} - {% endif %} {{site.title}} // {{site.description}}</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes width=device-width">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/fontello.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/js/script.js"></script>
+	<script src="/js/respond.js"></script>
+    <!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="//use.typekit.net/zgt2dns.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="{{ page.title }}">
+
+	<header class="site-header cf page-chrome">
+		<section class="top">
+			<a href="/" class="branding">
+				<img src="/img/avatar.png" class="avatar" />
+				<h1 class="name">Tom Oakley</h1>
+			</a>
+			<div class="contact-dropdown-group">
+				<a href="#contact-details" class="contact-me"><span class="main-link">Get in touch <span class="bold">&#8611;</span></span><span class="additional">I <span class="heart">&#10084;</span> to talk</span></a>
+				<div class="contact-details" id="contact-details">
+					<a href="mailto:tom@5lin.es" class="email">tom@5lin.es</a>
+					<ul class="social-icons">
+						<li><a href="http://linkedin.com/in/tomoakley" class="icon-linkedin"></a></li>
+						<li><a href="http://forrst.com/people/tomoakley" class="icon-forrst"></a></li>
+						<li><a href="http://dribbble.com/tomoakley" class="icon-dribbble"></a></li>
+						<li><a href="skype:tomoakley125?chat" class="icon-skype"></a></li>
+						<li><a href="http://twitter.com/tomoakley125" class="icon-twitter"></a></li>
+						<li><a href="http://github.com/tomoakley" class="icon-github"></a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="bottom">
+			<ul class="main-nav nav">			
+				{% for node in site.pages %}
+					{% if node.navigation != false  %}
+						{% if page.url == node.url %}
+							<li class="active"><a href="{{node.url}}" title="{{ node.description }}" class="active">{{node.title}}</a></li>
+						{% else %}
+							<li><a href="{{node.url}}" title="{{ node.description }}">{{node.title}}</a></li>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</section>
+	</header>
+	
+	<section class="site-content cf">
+		{{ content }}
+	</section>
+	
+	<footer class="site-footer cf page-chrome">
+		<section class="top">
+			<ul class="nav">			
+				{% for page in site.pages %}
+					{% if page.navigation != false  %}
+						<li><a href="{{ page.url }}" title="{{ page.description }}">{{ page.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<a class="to-top" href="#top">Top &#9652;</a>
+		</section>
+		<section class="bottom">
+			<span class="legal">&copy; Tom Oakley. Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</span>
+			<span class="year">MMXIII</span>
+		</section>
+	</footer>
+</body>
+</html>
