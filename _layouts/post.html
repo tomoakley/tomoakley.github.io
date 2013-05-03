@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="entry-item">
+	
+	<ul class="entry-images">
+		{% if page.image %}
+			<li><img src="{{ page.image }}" /></li>
+		{% endif %}
+		{% if page.image-2 %}
+			<li><img src="{{ page.image-2 }}" /></li>
+		{% endif %}
+		{% if page.image-3 %}
+			<li><img src="{{ page.image-3 }}" /></li>
+		{% endif %}
+	</ul>
+	
+	<h2 class="entry-title">{{ page.title }}</h2>
+	
+	<p class="entry-content">{{ page.content }}
+</div>
+
+{% if page.next %}
+	<a href="{{ page.next.url }}" class="next">{{ page.next.title }}</a>
+{% endif %}
+{% if page.previous %}
+	<a href="{{ page.previous.url }}" class="prev">{{ page.previous.title }}</a>
+{% endif %}
