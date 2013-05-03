@@ -2,4 +2,6 @@ auto: true
 title: Tom Oakley
 description: "Designer & Developer"
 permalink: /:categories/:title
-destination: _site
+destination: /_site
+safe: true
+source: /
