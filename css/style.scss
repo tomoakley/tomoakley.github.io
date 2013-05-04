@@ -581,6 +581,9 @@ body {
 			margin: 0 8.4%; 
 			float: left;
 		}
+		p {
+			margin: 0;
+		}
 	}
 	
 	.about-intro {
@@ -591,9 +594,6 @@ body {
 			width: 60%;
 			margin-right: 1.52%;
 			margin-left: 0;
-		}
-		p {
-			margin: 0;
 		}
 	}
 	
@@ -644,6 +644,10 @@ body {
 			color: #444;
 		}
 	}
+}
+
+.no-posts {
+	text-align: center;
 }
 
 .entry-content,

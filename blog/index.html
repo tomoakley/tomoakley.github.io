@@ -16,3 +16,6 @@ weight: 2
 		</div>
 	</article>
 {% endfor %}
+{% if site.categories.blog == null %}
+	<p class="no-posts">I haven't published any posts yet. Check back soon for an update.</p>
+{% endif %}
