@@ -452,7 +452,8 @@ body {
 	}
 	
 	.hero-header,
-	.page-title {
+	.page-title,
+	h2.entry-title {
 		text-align: center;
 		font-family: "Adelle";
 	}
@@ -498,7 +499,8 @@ body {
 	
 	[class^="-item"]:after,
 	[class*="-item"]:after,
-	.page-title:after {
+	.page-title:after,
+	h2.entry-title:after {
 		content: '';
 		display: block;
 		width: 250px;
@@ -507,7 +509,8 @@ body {
 		margin: 1.5em auto;
 	}
 	
-	.page-title:after {
+	.page-title:after,
+	h2.entry-title:after {
 		margin-top: 0;
 		margin-bottom: 1em;
 		width: 60px;
