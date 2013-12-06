@@ -53,7 +53,6 @@
 .icon-twitter:hover:before {
 	color: #00a0d1;
 }
-.icon-facebook-squared:before { content: '\f30e'; } /* '' */
 .icon-linkedin:before { content: '\f318'; } /* '' */
 .icon-linkedin:hover:before {
 	color: #007bb6;
