@@ -113,6 +113,14 @@ $baseline-px: 10px;
   }
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?6027407");
+  src: url("../font/fontello.eot?6027407#iefix") format('embedded-opentype'), url("../font/fontello.woff?6027407") format('woff'), url("../font/fontello.ttf?6027407") format('truetype'), url("../font/fontello.svg?6027407#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 ::selection {
 	background: #444;
 	color: #fff;	
@@ -227,12 +235,9 @@ body {
 		border-bottom: none;
 		display: block;
 		width: 175px;
-		margin: 0 auto;
 		border: 0;
-		@media screen and (min-width: 40em) {
-			float: left;
-			margin: 0;
-		}
+		float: left;
+		margin: 0;
 		.avatar {
 			width: 38px;
 			border-radius: 50%;
@@ -260,16 +265,10 @@ body {
 	}	
 	.contact-dropdown-group {
 		position: relative;
-		float: none;
-		margin: 50px auto 0;
+		float: right;
+		margin: 0;
 		text-align: center;
-		width: 200px;
 		display: block;
-		@media screen and (min-width: 40em) {
-			float: right;
-			margin: 0;
-			left: 44px;
-		}
 		.contact-me {
 			text-decoration: none;
 			transition: 0.2s all ease;
@@ -333,19 +332,18 @@ body {
 		}
 		
 		.contact-details {
-			width: inherit;
+			width: 200px;
 			height: 150px;
 			background: #fff;
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: -44.5px;
 			-webkit-transition: top 0.3s ease;
 			box-shadow: 1px 1px 7px #eee;
 			display: none;
 			box-sizing: border-box;
 			padding: 4em 0 1em 0;
 			text-align: center;
-			
 			.email {
 				font-size: 1.85rem;
 				text-decoration: none;
@@ -437,6 +435,44 @@ body {
 */
 		}
 	}
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.social-icons a {
+	content: attr(data-icon);
+	font-family: 'fontello';
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	color: #444;
+	transition: 0.2s color ease;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+}
+
+.icon-forrst:hover:before {
+	color: #5b9a68;
+}
+.icon-github:hover:before {
+	color: #4183c4;
+}
+.icon-twitter:hover:before {
+	color: #00a0d1;
+}
+.icon-linkedin:hover:before {
+	color: #007bb6;
+}
+.icon-dribbble:hover:before {
+	color: #ea4c89;
+}
+.icon-skype:hover:before {
+	color: #00aff0;
 }
 
 .site-content {
