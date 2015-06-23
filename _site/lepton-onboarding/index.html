@@ -1,0 +1,245 @@
+<html>
+
+<head>
+  <title>Lepton Onboarding</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="//use.typekit.net/zgt2dns.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    $(document).ready(function() {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        itemWidth: "320px",
+        directionNav: false,
+        touch: true,
+        keyboard: true,
+        animationSpeed: 500,
+        after: function() {
+          $(".flex-active-slide > .page-icon").animate({
+            opacity: 1,
+            top: "+=60"
+          }, 150, "swing", function() {
+            $(this).animate({
+              top: "-=15"
+            }, 150);
+          });
+        },
+        before: function() {
+          $(".flex-active-slide > .page-icon").animate({
+            opacity: 0,
+            top: "-75"
+          }, 150);
+        }
+      });
+
+      $('.flexslider-2').flexslider({
+        animation: "slide",
+        itemWidth: "320px",
+        directionNav: false,
+        touch: true,
+        keyboard: true,
+        animationSpeed: 500,
+        after: function() {
+          $(".flexslider-2 .flex-active-slide > .feature:nth-child(odd)").animate({
+            opacity: 1,
+            left: "+=40"
+          }, 150, "swing", function() {
+            $(this).animate({
+              left: "-=10"
+            }, 150);
+          });
+          $(".flexslider-2 .flex-active-slide > .feature:nth-child(even)").animate({
+            opacity: 1,
+            right: "+=40"
+          }, 150, "swing", function() {
+            $(this).animate({
+              right: "-=10"
+            }, 150);
+          });
+        },
+        before: function() {
+          $(".flexslider-2 .flex-active-slide > .feature:nth-child(odd)").animate({
+            opacity: 0,
+            left: "-30"
+          }, 150, "swing");
+          $(".flexslider-2 .flex-active-slide > .feature:nth-child(even)").animate({
+            opacity: 0,
+            right: "-30"
+          }, 150, "swing");
+        }
+      });
+      $('.flexslider-3').flexslider({
+        animation: "slide",
+        itemWidth: "320px",
+        directionNav: false,
+        touch: true,
+        keyboard: true,
+        animationSpeed: 500,
+        after: function() {
+          $(".flexslider-3 .flex-active-slide .page-img").animate({
+            opacity: 1,
+            bottom: "-20"
+          }, 150, "swing", function() {
+            $(this).animate({
+              bottom: "-30"
+            }, 150);
+          });
+        },
+        before: function() {
+          $(".flexslider-3 .flex-active-slide .page-img").animate({
+            bottom: "-70",
+            opacity: 0
+          }, 150, "swing");
+        }
+      });
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  
+  <body>
+    <div class="iphone-surround">
+      <img class="status-bar" src="images/status-bar.png" />
+      <div class="flexslider">
+        <ul class="slides">
+          <li class="welcome-page">
+            <img src="images/lepton-logo.png" alt="Lepton" class="lepton-logo page-icon" />
+            <h1 class="page-title">Welcome to Lepton!</h1>
+            <p class="page-text">The cheerful Christian giving app.</p>
+          </li>
+          <li>
+            <div class="page-icon"></div>
+            <h1 class="page-title">Church</h1>
+            <p class="page-text">Keep up to date with your church and its giving activities</p>
+          </li>
+          <li>
+            <div class="page-icon"></div>
+            <h1 class="page-title">Give</h1>
+            <p class="page-text">Once your payment details are stored, set up donations in just a few taps</p>
+          </li>
+          <li>
+            <div class="page-icon"></div>
+            <h1 class="page-title">Giving Calculator</h1>
+            <p class="page-text">Helps you work out how much to give either regularly, or as a one off gift</p>
+          </li>
+          <li>
+            <div class="page-icon"></div>
+            <h1 class="page-title">Community</h1>
+            <p class="page-text">See what other people support. Optionally let others know that you gave</p>
+          </li>
+          <li>
+            <div class="page-icon"></div>
+            <h1 class="page-title">Profile</h1>
+            <p class="page-text">Build your own public and private generosity profile</p>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="skip-btn">Skip</a>
+    </div>
+
+    <div class="iphone-surround">
+      <img class="status-bar" src="images/status-bar.png" />
+      <div class="flexslider-2">
+        <ul class="slides">
+          <li class="welcome-page">
+            <img src="images/lepton-logo.png" alt="Lepton" class="lepton-logo page-icon" />
+            <h1 class="page-title">Welcome to Lepton!</h1>
+            <p class="page-text">The cheerful Christian giving app</p>
+          </li>
+          <li>
+            <div class="feature">
+              <i class="feature-icon"></i>
+              <h1 class="feature-title">Church</h1>
+              <span class="feature-text">Keep up to date with your church and its giving activities</span>
+            </div>
+            <div class="feature">
+              <i class="feature-icon"></i>
+              <h1 class="feature-title">Give</h1>
+              <span class="feature-text">Once your payment details are stored, set up donations in just a few taps</span>
+            </div>
+            <div class="feature">
+              <i class="feature-icon"></i>
+              <h1 class="feature-title">Giving Calculator</h1>
+              <span class="feature-text">Helps you work out how much to give either regularly, or as a one off gift</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature">
+              <i class="feature-icon"></i>
+              <h1 class="feature-title">Community</h1>
+              <span class="feature-text">See what other people support. Optionally let others know that you gave</span>
+            </div>
+            <div class="feature">
+              <i class="feature-icon"></i>
+              <h1 class="feature-title">Profile</h1>
+              <span class="feature-text">Build your own public and private generosity profile</span>
+            </div>
+            <a href="#" class="go-btn">Lets Go</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iphone-surround">
+      <img class="status-bar" src="images/status-bar-white.png" />
+      <div class="flexslider-3">
+        <ul class="slides">
+          <li class="welcome-page">
+            <img src="images/lepton-logo.png" alt="Lepton" class="lepton-logo page-icon" />
+            <h1 class="page-title">Welcome to Lepton!</h1>
+            <p class="page-text">The cheerful Christian giving app</p>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="images/mychurch_screen.png" alt="Church" class="page-img" />
+            </div>
+            <div class="feature">
+              <h1 class="feature-title">Church</h1>
+              <span class="feature-text">Keep up to date with your church and its giving activities</span>
+            </div>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="images/give_screen.png" alt="Give" class="page-img" />
+            </div>
+            <div class="feature">
+              <h1 class="feature-title">Give</h1>
+              <span class="feature-text">Once your payment details are stored, set up donations in just a few taps</span>
+            </div>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="images/givingcalc_screen.png" alt="Give" class="page-img" />
+            </div>
+            <div class="feature">
+              <h1 class="feature-title">Giving Calculator</h1>
+              <span class="feature-text">Helps you work out how much to give either regularly, or as a one off gift</span>
+            </div>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="images/give_screen.png" alt="Give" class="page-img" />
+            </div>
+            <div class="feature">
+              <h1 class="feature-title">Community</h1>
+              <span class="feature-text">See what other people support. Optionally let others know that you gave</span>
+            </div>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="images/give_screen.png" alt="Give" class="page-img" />
+            </div>
+            <div class="feature">
+              <h1 class="feature-title">Profile</h1>
+              <span class="feature-text">Build your own public and private generosity profile</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>
